@@ -13,6 +13,7 @@ class PhotosController < ApplicationController
 
   def new
     @photo = Photo.new
+    @current_user = current_user
 
     render("photos/new.html.erb")
   end

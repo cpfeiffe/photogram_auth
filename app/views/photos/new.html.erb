@@ -18,6 +18,8 @@
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
+      <input name="user_id" type="hidden" value="<%= @current_user.id %>">
+
       <!-- Label and input for caption -->
       <div class="form-group">
         <label for="caption" class="control-label">
@@ -34,15 +36,6 @@
         </label>
 
         <input type="text" id="image" name="image" placeholder="Image" class="form-control" value="<%= @photo.image %>">
-      </div>
-
-      <!-- Label and input for user_id -->
-      <div class="form-group">
-        <label for="user_id" class="control-label">
-          User
-        </label>
-
-        <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @photo.user_id %>">
       </div>
 
       <button class="btn btn-success">
